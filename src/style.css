@@ -1,1 +1,54 @@
+body {
+  font-family: PT "Courier New", Courier, monospace;
+}
 
+h1,
+h2 {
+  color: white;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 28px;
+}
+h2 {
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 28px;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #085686;
+  border-radius: 7px;
+  background: radial-gradient(rgb(0, 135, 201) 0%, rgb(7, 58, 146) 100%);
+}
+.day-time {
+  font-size: 20px;
+  font-weight: 150;
+  color: white;
+}
+.humid-wind {
+  padding-top: 15px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  color: #89c2eb;
+}
+.humid-icon {
+  margin-right: 5px;
+}
+.wind-icon {
+  margin-right: 5px;
+}
+.weather-icon {
+  width: 250px;
+}

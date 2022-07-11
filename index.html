@@ -17,27 +17,46 @@
     <div class="container">
       <div class="weather-app">
         <div class="row">
-          <div class="col-6">
+          <div class="col-9">
             <h1>City</h1>
           </div>
-          <div class="col-6">
-            <h2>20℃</h2>
+          <div class="col-3">
+            <h2>20°C</h2>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-3">
-            <ul>
+          <div class="col-4">
+            <ul class="day-time">
               <li>Monday 05:00</li>
               <li>Clear</li>
-              <li>50%</li>
-              <li>20 km/h</li>
+            </ul>
+
+            <ul class="humid-wind">
+              <li>
+                <img
+                  class="humid-icon"
+                  src="img/humid.png"
+                  alt=""
+                  width="13px"
+                />
+                50%
+              </li>
+              <li>
+                <img
+                  class="wind-icon"
+                  src="img/wind.png"
+                  alt=""
+                  width="15px"
+                />20 km/h
+              </li>
             </ul>
           </div>
 
-          <div class="col-9">
-            <img src="img/sun.png" alt="sun" />
+          <div class="col-6">
+            <img class="weather-icon" src="img/cloud.png" alt="sun" />
           </div>
+          <div class="col-2"></div>
           <small>
             <a
               href="https://github.com/katja4erry/Vanilla-weather-app"
