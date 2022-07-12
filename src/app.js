@@ -57,7 +57,33 @@ function displayTemperature(response) {
   if (responseIcon === "50d") {
     srcIcon = "img/cloudly.png";
   }
-
+  if (responseIcon === "01n") {
+    srcIcon = "img/sun.png";
+  }
+  if (responseIcon === "02n") {
+    srcIcon = "img/cloud.png";
+  }
+  if (responseIcon === "03n") {
+    srcIcon = "img/cloudly.png";
+  }
+  if (responseIcon === "04n") {
+    srcIcon = "img/cloudly.png";
+  }
+  if (responseIcon === "09n") {
+    srcIcon = "img/snow.png";
+  }
+  if (responseIcon === "10n") {
+    srcIcon = "img/rain.png";
+  }
+  if (responseIcon === "11n") {
+    srcIcon = "img/groza.png";
+  }
+  if (responseIcon === "13n") {
+    srcIcon = "img/snow.png";
+  }
+  if (responseIcon === "50n") {
+    srcIcon = "img/cloudly.png";
+  }
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -68,7 +94,7 @@ function displayTemperature(response) {
 }
 
 let apiKey = "827bb2da8bfca5b7c691ac1dc2ac84b8";
-let city = "London";
+let city = "Oslo";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
