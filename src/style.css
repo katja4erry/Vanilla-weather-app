@@ -65,6 +65,9 @@ ul {
   padding-top: 15px;
   padding-left: 25px;
 }
-.description::first-letter {
+.description:first-letter {
   text-transform: capitalize;
+}
+.description {
+  padding-top: 15px;
 }
