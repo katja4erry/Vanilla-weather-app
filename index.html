@@ -11,6 +11,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -19,10 +20,11 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-8">
-              <h1>City</h1>
+              <h1 id="city">City</h1>
             </div>
-            <div class="col-4">
-              <h2>20°C</h2>
+            <div class="col-4 temp-value">
+              <span class="temp" id="temperature">20</span>
+              <span class="units">°C</span>
             </div>
           </div>
 
@@ -30,7 +32,7 @@
             <div class="col-4">
               <ul class="day-time">
                 <li>Monday 05:00</li>
-                <li>Clear</li>
+                <li class="description" id="description">Clear</li>
               </ul>
 
               <ul class="humid-wind">
@@ -41,7 +43,7 @@
                     alt=""
                     width="13px"
                   />
-                  50%
+                  <span id="humidity">50</span>%
                 </li>
                 <li>
                   <img
@@ -49,7 +51,8 @@
                     src="img/wind.png"
                     alt=""
                     width="15px"
-                  />20 km/h
+                  />
+                  <span id="wind">20</span> km/h
                 </li>
               </ul>
             </div>
