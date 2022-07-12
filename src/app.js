@@ -33,7 +33,28 @@ function displayTemperature(response) {
   if (responseIcon === "01d") {
     srcIcon = "img/sun.png";
   }
+  if (responseIcon === "02d") {
+    srcIcon = "img/cloud.png";
+  }
+  if (responseIcon === "03d") {
+    srcIcon = "img/cloudly.png";
+  }
   if (responseIcon === "04d") {
+    srcIcon = "img/cloudly.png";
+  }
+  if (responseIcon === "09d") {
+    srcIcon = "img/snow.png";
+  }
+  if (responseIcon === "10d") {
+    srcIcon = "img/rain.png";
+  }
+  if (responseIcon === "11d") {
+    srcIcon = "img/groza.png";
+  }
+  if (responseIcon === "13d") {
+    srcIcon = "img/snow.png";
+  }
+  if (responseIcon === "50d") {
     srcIcon = "img/cloudly.png";
   }
 
