@@ -71,3 +71,12 @@ ul {
 .description {
   padding-top: 15px;
 }
+.button {
+  color: rgb(7, 58, 146);
+}
+.button:hover {
+  background-color: #3f8fcc;
+  color: white;
+
+  transition: all 200ms ease-in;
+}
