@@ -55,10 +55,12 @@ ul {
   width: 280px;
 }
 .units {
-  font-size: 64px;
-  font-weight: 200;
+  font-size: 24px;
+  font-weight: 100;
   line-height: 28px;
   color: white;
+  position: relative;
+  top: -30px;
 }
 
 .temp-value {
@@ -79,4 +81,27 @@ ul {
   color: white;
 
   transition: all 200ms ease-in;
+}
+.source-link {
+  color: #1768ff;
+  text-decoration: underline;
+}
+.source-link:hover {
+  text-decoration: none;
+}
+
+.temp-value .active {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+}
+.temp-value .active:hover {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #3f8fcc;
+}
+a:hover {
+  color: #469cff;
 }
