@@ -37,7 +37,7 @@ function displayTemperature(response) {
     srcIcon = "img/sun.png";
   }
   if (responseIcon === "02d") {
-    srcIcon = "img/cloud.png";
+    srcIcon = "img/fewcloud.png";
   }
   if (responseIcon === "03d") {
     srcIcon = "img/cloudly.png";
@@ -46,7 +46,7 @@ function displayTemperature(response) {
     srcIcon = "img/cloudly.png";
   }
   if (responseIcon === "09d") {
-    srcIcon = "img/snow.png";
+    srcIcon = "img/rain.png";
   }
   if (responseIcon === "10d") {
     srcIcon = "img/rain.png";
@@ -58,13 +58,13 @@ function displayTemperature(response) {
     srcIcon = "img/snow.png";
   }
   if (responseIcon === "50d") {
-    srcIcon = "img/cloudly.png";
+    srcIcon = "img/mist.png";
   }
   if (responseIcon === "01n") {
     srcIcon = "img/sun.png";
   }
   if (responseIcon === "02n") {
-    srcIcon = "img/cloud.png";
+    srcIcon = "img/fewcloud.png";
   }
   if (responseIcon === "03n") {
     srcIcon = "img/cloudly.png";
@@ -73,7 +73,7 @@ function displayTemperature(response) {
     srcIcon = "img/cloudly.png";
   }
   if (responseIcon === "09n") {
-    srcIcon = "img/snow.png";
+    srcIcon = "img/rain.png";
   }
   if (responseIcon === "10n") {
     srcIcon = "img/rain.png";
@@ -85,7 +85,7 @@ function displayTemperature(response) {
     srcIcon = "img/snow.png";
   }
   if (responseIcon === "50n") {
-    srcIcon = "img/cloudly.png";
+    srcIcon = "img/mist.png";
   }
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
