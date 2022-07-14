@@ -105,3 +105,31 @@ a {
 a:hover {
   color: #469cff;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+  color: #89c2eb;
+  margin-top: 15px;
+}
+.weather-forecast-temperatures {
+  font-size: 15px;
+  color: white;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+}
+.weathet-forecast-collom {
+  border: 1px solid #3165ae;
+  border-radius: 7px;
+  background: #3165ae;
+  margin: 5px;
+  max-width: 87px;
+  padding: 15px 0 15px 0;
+}
