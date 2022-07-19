@@ -21,30 +21,101 @@ function formatDate(timestemp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      let responseIcon = `${forecastDay.weather[0].icon}`;
+      if (responseIcon === "01d") {
+        srcIcon = "img/sun.png";
+      }
+      if (responseIcon === "02d") {
+        srcIcon = "img/fewcloud.png";
+      }
+      if (responseIcon === "03d") {
+        srcIcon = "img/cloudly.png";
+      }
+      if (responseIcon === "04d") {
+        srcIcon = "img/cloudly.png";
+      }
+      if (responseIcon === "09d") {
+        srcIcon = "img/rain.png";
+      }
+      if (responseIcon === "10d") {
+        srcIcon = "img/rain.png";
+      }
+      if (responseIcon === "11d") {
+        srcIcon = "img/groza.png";
+      }
+      if (responseIcon === "13d") {
+        srcIcon = "img/snow.png";
+      }
+      if (responseIcon === "50d") {
+        srcIcon = "img/mist.png";
+      }
+      if (responseIcon === "01n") {
+        srcIcon = "img/sun.png";
+      }
+      if (responseIcon === "02n") {
+        srcIcon = "img/fewcloud.png";
+      }
+      if (responseIcon === "03n") {
+        srcIcon = "img/cloudly.png";
+      }
+      if (responseIcon === "04n") {
+        srcIcon = "img/cloudly.png";
+      }
+      if (responseIcon === "09n") {
+        srcIcon = "img/rain.png";
+      }
+      if (responseIcon === "10n") {
+        srcIcon = "img/rain.png";
+      }
+      if (responseIcon === "11n") {
+        srcIcon = "img/groza.png";
+      }
+      if (responseIcon === "13n") {
+        srcIcon = "img/snow.png";
+      }
+      if (responseIcon === "50n") {
+        srcIcon = "img/mist.png";
+      }
+      forecastHTML =
+        forecastHTML +
+        ` 
               <div class="col-2 weathet-forecast-collom">
                 <img
                                 
-                src="img/cloud.png"
+                src=${srcIcon}
                 alt="sun"
                 width="50"
                />
-                <div class="weather-forecast-date" >${day}</div>
+               
+                <div class="weather-forecast-date" >${formatDay(
+                  forecastDay.dt
+                )}</div>
                
                <div class="weather-forecast-temperatures">
-                 <span class="weather-forecast-temperature-max">18° </span> 
-                 <span class="weather-forecast-temperature-min">12°</span>
+                 <span class="weather-forecast-temperature-max">${Math.round(
+                   forecastDay.temp.max
+                 )}° </span> 
+                 <span class="weather-forecast-temperature-min">${Math.round(
+                   forecastDay.temp.min
+                 )}°</span>
                 </div>
               </div>
              `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
