@@ -1,5 +1,5 @@
 body {
-  font-family: PT "Courier New", Courier, monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -105,7 +105,7 @@ a:hover {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 5px;
   text-align: center;
 }
 .weather-forecast-date {
